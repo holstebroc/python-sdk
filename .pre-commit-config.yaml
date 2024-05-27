@@ -25,7 +25,7 @@ repos:
       - id: trailing-whitespace
         files: ^zkml/
 
-  - repo: https://github.com/pycqa/isort
+  - repo: https://github.com/PyCQA/isort
     rev: 5.12.0
     hooks:
       - id: isort
@@ -37,11 +37,10 @@ repos:
     hooks:
       - id: black
         language_version: python3
-        # args: [--line-length 79]
         files: ^zkml/
 
-  - repo: https://github.com/pycqa/flake8
-    rev: 6.0.0
+  - repo: https://github.com/PyCQA/flake8
+    rev: 4.0.0
     hooks:
       - id: flake8
         exclude: docs/conf.py
@@ -59,19 +58,19 @@ repos:
     rev: 1.6.1
     hooks:
       - id: nbqa-black
-        args: [--nbqa-dont-skip-bad-cells]
+        args: ["--nbqa-dont-skip-bad-cells"]
         additional_dependencies: [black==22.3.0]
         files: ^zkml/
       - id: nbqa-isort
-        args: [--nbqa-dont-skip-bad-cells]
+        args: ["--nbqa-dont-skip-bad-cells"]
         additional_dependencies: [isort==5.6.4]
         files: ^zkml/
       - id: nbqa-flake8
-        args: [--nbqa-dont-skip-bad-cells, "--extend-ignore=E402,E203"]
+        args: ["--nbqa-dont-skip-bad-cells", "--extend-ignore=E402,E203"]
         additional_dependencies: [flake8==3.8.3]
         files: ^zkml/
 
-  - repo: https://github.com/pycqa/pydocstyle
+  - repo: https://github.com/PyCQA/pydocstyle
     rev: 6.3.0
     hooks:
       - id: pydocstyle
